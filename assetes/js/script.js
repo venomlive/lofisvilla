@@ -1,7 +1,7 @@
 let currentSong = new Audio();
 let songs;
 async function getsongs() {
-   let a = await fetch("/songs/")
+   let a = await fetch("/public/songs/")
    let response = await a.text();
    let div = document.createElement("div");
    div.innerHTML = response;
@@ -10,7 +10,7 @@ async function getsongs() {
    for (let index = 0; index < as.length; index++) {
       const element = as[index];
       if (element.href.endsWith(".mp3")) {
-         songs.push(element.href.split("/songs/")[1]);
+         songs.push(element.href.split("/public/songs/")[1]);
 
       }
    }
@@ -20,7 +20,7 @@ async function getsongs() {
 
 const playMusic = (track, pause = false) => {
    // let audio = new Audio("/songs/" + track);
-   currentSong.src = "/songs/" + track;
+   currentSong.src = "/public/songs/" + track;
    if (!pause) {
       currentSong.play();
       play.src = "/assetes/image/pause.svg"
