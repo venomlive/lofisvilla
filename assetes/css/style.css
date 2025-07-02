@@ -122,27 +122,29 @@ body {
 .songlist {
     height: 440px;
     overflow: auto;
-    margin-bottom: 44px opx;
+    margin-bottom: 44px 0px;
     /* display:flex; */
 }
 
 
 
-.songlist ul li {
+.songlist  li {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 12px;
     margin: 12px 12px;
     color: #7d7c7c;
-    font-family: 'Roboto', sans-serif;
-    ;
+    font-family: 'Roboto', sans-serif;;
     cursor: pointer;
     border: 2px solid #423e3e;
     border-radius: 20px;
     object-fit: cover;
     transition: all 0.4s ease-out;
 
+}
+.songlist li{
+    gap:20px;
 }
 
 .songlist ul li:hover {
@@ -155,7 +157,7 @@ body {
     height: 20px;
 }
 
-.songinfo {
+.info {
     width:320px;
 }
 
@@ -318,6 +320,7 @@ body {
         position: fixed;
         top: 0;
     }
+    
 
     .right {
         width: 100vw;
@@ -325,7 +328,8 @@ body {
     }
 
     .playbar {
-        width: calc(100vw - 90px);
+        width: calc(100vw - 100px);
+        /* min-height: 30lvh; */
     }
 
     .card {
@@ -417,6 +421,13 @@ body {
         position: absolute;
         right:8px;
         top: 10px;
+    }
+    .footer-content
+    {
+        /* position: 0; */
+
+        color: #7d7c7c;
+
     }
 
     .ham2 img {
