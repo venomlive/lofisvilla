@@ -7,6 +7,7 @@
 
 body {
     background-color: #000000;
+   
     font-family: 'Roboto', sans-serif;
 }
 
@@ -49,6 +50,19 @@ body {
     gap: 45px;
     padding-left: 30px;
 }
+.navlist  a{
+    /* background-color: red; */
+    text-decoration: none;
+    color: #666;
+
+}
+/* .navlist ul :hover{
+    background-color: #666;
+} */
+.signup .login:hover{
+    background-color: aliceblue;
+}
+
 
 .searchi img {
     /* background-color: red; */
@@ -273,7 +287,6 @@ body {
     bottom: 1;
     cursor: pointer;
 }
-
 .circle {
     width: 13px;
     height: 13px;
@@ -320,6 +333,7 @@ body {
         position: fixed;
         top: 0;
     }
+  
     
 
     .right {
