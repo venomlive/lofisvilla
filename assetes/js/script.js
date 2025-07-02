@@ -1,25 +1,20 @@
 let currentSong = new Audio();
 let songs;
-async function getsongs() {
-   let a = await fetch("/public/songs/")
-   let response = await a.text();
-   let div = document.createElement("div");
-   div.innerHTML = response;
-   let as = div.getElementsByTagName("a");
-   let songs = [];
-   for (let index = 0; index < as.length; index++) {
-      const element = as[index];
-      if (element.href.endsWith(".mp3")) {
-         songs.push(element.href.split("/public/songs/")[1]);
-
-      }
+async function getSongs() {
+   try {
+      const res = await fetch("/public/songs.json");
+      const songList = await res.json(); // array of filenames like ["lofi1.mp3", ...]
+      return songList;
+   } catch (err) {
+      console.error("Failed to load songs.json", err);
+      return [];
    }
-   return songs;
-
 }
 
+
+
 const playMusic = (track, pause = false) => {
-   // let audio = new Audio("/songs/" + track);
+   console.log(track)
    currentSong.src = "/public/songs/" + track;
    if (!pause) {
       currentSong.play();
@@ -29,11 +24,12 @@ const playMusic = (track, pause = false) => {
    document.querySelector(".songtime").innerHTML = "00.00/00.00"
    // audio.play();
 }
+
+
+
 async function main() {
-
-
    //get the song list
-   songs = await getsongs()
+   songs = await getSongs()
    playMusic(songs[0], true)
    console.log(songs);
    let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0];
