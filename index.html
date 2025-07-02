@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="/assetes/css/style.css">
+    <link rel="stylesheet" href="/assetes/css/utilites.css">
+    <link rel="website icon" type="png" href="image.png">
+</head>
+
+<body>
+    <nav>
+        <!-- <div>
+                    <img class=" hamburger2 invert " src="hamburger.svg">
+                </div> -->
+
+
+        <div class="flex gap m-2 navbar">
+            <div class="logo flex justiy-center align-center invert"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="2rem" height="2rem" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288" />
+                </svg>
+            </div>
+            <div class="home flex justiy-center align-center invert"><a href="index.html" target="_blank"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="1.5rem" height="1.5rem">
+                        <path
+                            d="M39.5,43h-9c-1.381,0-2.5-1.119-2.5-2.5v-9c0-1.105-0.895-2-2-2h-4c-1.105,0-2,0.895-2,2v9c0,1.381-1.119,2.5-2.5,2.5h-9	C7.119,43,6,41.881,6,40.5V21.413c0-2.299,1.054-4.471,2.859-5.893L23.071,4.321c0.545-0.428,1.313-0.428,1.857,0L39.142,15.52	C40.947,16.942,42,19.113,42,21.411V40.5C42,41.881,40.881,43,39.5,43z" />
+                    </svg></a>
+            </div>
+            <div class="search flex">
+                <div class="searchi invert">
+                    <img src="assetes/image/search.svg">
+                </div>
+
+                <input class="search-bar" type="text" placeholder="  What do you want to play?">
+
+            </div>
+            <div class="ham2">
+                <img class="invert" src="/assetes/image/hamburger.svg">
+            </div>
+
+            <div class=" flex nav-items  ">
+
+                <ul class=" gap3 navlist">
+                    <div class="close2">
+                        <img class="invert" src="/assetes/image/cancel.svg">
+                    </div>
+                    <li class="premium"><a href="#">Premium</a></li>
+                    <li class="download"><a href="#">Download</a></li>
+                    <li class="support"><a href="#">Support</a></li>
+                    <li class="install flex"><a><svg class="invert" width="1.5rem" height="1.5rem" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" stroke="#000000" stroke-width="2"
+                                    d="M12,18 L12,8 L12,18 Z M12,23 C18.0751322,23 23,18.0751322 23,12 C23,5.92486775 18.0751322,1 12,1 C5.92486775,1 1,5.92486775 1,12 C1,18.0751322 5.92486775,23 12,23 Z M17,12 L12,7 L7,12"
+                                    transform="matrix(1 0 0 -1 0 24)" />
+                            </svg></a><span class="install-text flex"><a href="#">Install App</a> </span></li>
+                    <li class="signup"><a href="#">Sign up</a></li>
+                    <li class="login"><a href="#">Log in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <hr> -->
+    <main>
+        <div class="flex m-1 gap2 ">
+
+            <div class="left  ">
+
+                <div class="l1 m-2">
+                    <div class="close"><img class="invert" src="cancel.svg"></div>
+
+                    <span>YOUR LIBRARY</span>
+                    <span class="span ">+</span>
+                </div>
+                <div class="songlist">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="fo">
+                    <footer class="footer-content m-2">
+                        <p>© 2025 Lofi'svilla AB</p>
+                        <p>Lofi'svilla is a registered trademark of MUDIT TYAGI</p>
+                    </footer>
+                </div>
+            </div>
+
+
+
+
+            <div class="right ">
+
+                <div class="lofi flex justiy-center align-center m-1 p-1">
+                    <div>
+                        <img class=" hamburger invert " src="hamburger.svg" alt="">
+                    </div>
+                    <h4> Lofi'svilla Playlist</h4>
+                </div>
+                <div class="cardcontainer ">
+                    <div class="card  ">
+                        <div class="card-image">
+                            <img aria-hidden="false" draggable="false" loading="lazy"
+                                src="https://i.scdn.co/image/ab67616d00001e02786a26c64ff6b997a9552910">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="m-1">Lofi'svilla Playlist</h3>
+                            <p class="m-1">Curated by Mudit Tyagi</p>
+                        </div>
+
+                    </div>
+                    <div class="card  ">
+                        <div class="card-image">
+                            <img aria-hidden="false" draggable="false" loading="lazy"
+                                src="https://i.scdn.co/image/ab67616d00001e02786a26c64ff6b997a9552910">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="m-1">Lofi'svilla Playlist</h3>
+                            <p class="m-1">Curated by Mudit Tyagi</p>
+                        </div>
+
+                    </div>
+                    <div class="card  ">
+                        <div class="card-image">
+                            <img aria-hidden="false" draggable="false" loading="lazy"
+                                src="https://i.scdn.co/image/ab67616d00001e02786a26c64ff6b997a9552910">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="m-1">Lofi'svilla Playlist</h3>
+                            <p class="m-1">Curated by Mudit Tyagi</p>
+
+                        </div>
+                    </div>
+                    <div class="card  ">
+                        <div class="card-image">
+                            <img aria-hidden="false" draggable="false" loading="lazy"
+                                src="https://i.scdn.co/image/ab67616d00001e02786a26c64ff6b997a9552910">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="m-1">Lofi'svilla Playlist</h3>
+                            <p class="m-1">Curated by Mudit Tyagi</p>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="playbar">
+                    <div class="seekbar ">
+                        <div class="circle invert"></div>
+                    </div>
+                    <div class="abovebar">
+
+
+                        <div class="songinfo">
+
+                        </div>
+                        <div class="songbuttons">
+                            <img width="35" id="previous" src="/assetes/image/previous.png" alt="">
+                            <img width="35" id="play" src="/assetes/image/play-button.png" alt="">
+                            <img width="35" id="next" src="/assetes/image/next.png" alt="">
+                        </div>
+                        <div class="timevol"></div>
+                        <div class="songtime">
+
+                        </div>
+                        <div class="volume">
+
+                            <div class="range">
+                                <input type="range" name="volume" id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="/assetes/js/script.js"></script>
+</body>
+
+</html>
