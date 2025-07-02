@@ -4,6 +4,7 @@ let songs;
 async function getsongs() {
    let a = await fetch("/songs/")
    let response = await a.text();
+   console.log(response)
    let div = document.createElement("div");
    div.innerHTML = response;
    let as = div.getElementsByTagName("a");
@@ -41,14 +42,14 @@ async function main() {
    for (const song of songs) {
       songul.innerHTML = songul.innerHTML +
          `<li>
-                        <img src="music-note-circle-svgrepo-com.svg" alt="music-note-circle"
+                        <img src="assetes/image/music-note-circle-svgrepo-com.svg" alt="music-note-circle"
                             class="invert">
                         <div class="info">
                             <div>${song.replaceAll("%20", " ")}</div>
                         
                         </div>
                         <div>
-                        <img  src="play-button.png" alt="play-button" class="invert ply-btn"></div>
+                        <img  src="assetes/image/play-button.png" alt="play-button" class="invert ply-btn"></div>
                         </div>
          </li>`;
 
@@ -71,7 +72,7 @@ play.addEventListener("click", () => {
    }
    else {
       currentSong.pause()
-      play.src = "play-button.png"
+      play.src = "/assetes/image/play-button.png"
    }
 })
 // duration
