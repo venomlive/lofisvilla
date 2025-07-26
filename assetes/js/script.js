@@ -97,11 +97,21 @@ currentSong.addEventListener("timeupdate", () => {
 
 //seekbaar
 // Add an event listener to seekbar
-document.querySelector(".seekbar").addEventListener("click", e => {
-   let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
-   document.querySelector(".circle").style.left = percent + "%";
-   currentSong.currentTime = ((currentSong.duration) * percent) / 100
-})
+currentSong.addEventListener("timeupdate", () => {
+   const current = currentSong.currentTime;
+   const duration = currentSong.duration;
+
+   // update time text
+   document.querySelector(".songtime").innerHTML =
+      `${secondsToMinutesSeconds(current)}/${secondsToMinutesSeconds(duration)}`;
+
+   // update seekbar circle
+   if (!isNaN(duration)) {
+      const percent = (current / duration) * 100;
+      document.querySelector(".circle").style.left = `${percent}%`;
+   }
+});
+
 // for previous the song
 previous.addEventListener("click", () => {
    currentSong.pause()
