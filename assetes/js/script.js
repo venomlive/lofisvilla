@@ -14,16 +14,22 @@ async function getSongs() {
 
 
 const playMusic = (track, pause = false) => {
-   console.log(track)
+   console.log(track);
    currentSong.src = "/public/songs/" + track;
+
+   // Reset seekbar and time
+   currentSong.currentTime = 0;
+   document.querySelector(".circle").style.left = "0%";
+   document.querySelector(".songtime").innerHTML = "00:00/00:00";
+
    if (!pause) {
       currentSong.play();
-      play.src = "/assetes/image/pause.svg"
+      play.src = "/assetes/image/pause.svg";
    }
-   document.querySelector(".songinfo").innerHTML = decodeURI(track)
-   document.querySelector(".songtime").innerHTML = "00.00/00.00"
-   // audio.play();
-}
+
+   document.querySelector(".songinfo").innerHTML = decodeURI(track);
+};
+
 
 
 
