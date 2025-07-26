@@ -7,35 +7,48 @@
 
 body {
     background-color: #000000;
-   
+
     font-family: 'Roboto', sans-serif;
 }
 
 
 .logo {
     padding-left: 5px;
+    min-width:40px;
+    height: 40px;
+    
+}
+.logo img {
+    display: inline;
+    line-height: normal;
 }
 
-.ham2  img{
+.ham2 img {
     height: 40px;
     width: 40px;
     display: none;
 
 }
+
 .close2 img {
     height: 35px;
     width: 35px;
     display: none;
 }
 
+
 .home {
-    /* border: 2px solid #161616; */
     height: 40px;
     width: 40px;
-    /* border-radius: 100%; */
     align-items: center;
     justify-content: center;
 
+}
+.home:hover {
+    /* color: #3a3737; */
+    background-color: #ccc9c9;
+    border-radius: 50px;
+    filter: invert(1);
 }
 
 .gap3 {
@@ -50,17 +63,17 @@ body {
     gap: 45px;
     padding-left: 30px;
 }
-.navlist  a{
+
+.navlist a {
     /* background-color: red; */
     text-decoration: none;
     color: #666;
 
 }
-/* .navlist ul :hover{
-    background-color: #666;
-} */
-.signup .login:hover{
-    background-color: aliceblue;
+
+
+.signup .login:hover {
+    color: rgb(197, 206, 213);
 }
 
 
@@ -110,7 +123,7 @@ body {
     width: 30vw;
     border-radius: 20px;
     background-color: #222020;
-    /* height: auto; */
+    height: auto;
     min-height: 85vh;
     position: relative;
 }
@@ -142,14 +155,15 @@ body {
 
 
 
-.songlist  li {
+.songlist li {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 12px;
     margin: 12px 12px;
     color: #7d7c7c;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    ;
     cursor: pointer;
     border: 2px solid #423e3e;
     border-radius: 20px;
@@ -157,8 +171,9 @@ body {
     transition: all 0.4s ease-out;
 
 }
-.songlist li{
-    gap:20px;
+
+.songlist li {
+    gap: 20px;
 }
 
 .songlist ul li:hover {
@@ -172,12 +187,12 @@ body {
 }
 
 .info {
-    width:320px;
+    width: 320px;
 }
 
 .footer-content {
 
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     text-align: center;
 }
@@ -280,13 +295,14 @@ body {
     width: 97%;
     background: rgb(146, 139, 139);
     border-radius: 10px;
-    /* position: absolute; */
+    position: absolute;
     bottom: 8px;
     margin: 6px;
     position: absolute;
     bottom: 1;
     cursor: pointer;
 }
+
 .circle {
     width: 13px;
     height: 13px;
@@ -333,8 +349,8 @@ body {
         position: fixed;
         top: 0;
     }
-  
-    
+
+
 
     .right {
         width: 100vw;
@@ -348,6 +364,7 @@ body {
 
     .card {
         width: 55vw;
+        margin: 20px;
     }
 
     .cardcontainer {
@@ -389,8 +406,11 @@ body {
 
     .playbar {
         right: 25px;
+        bottom: 10px;
+        width: calc(80vw -130%);
     }
-    .navbar{
+
+    .navbar {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -405,42 +425,49 @@ body {
         z-index: 1;
         width: 240px;
         height: 100vh;
-        padding:0;
+        padding: 0;
         position: fixed;
         top: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
+
         /* flex-wrap: wrap; */
-        
+
 
     }
-    .navlist li{
 
-        border:2px solid grey;
-         padding: 10px;
-         width:200px;
+    .navlist li {
+
+        border: 2px solid grey;
+        padding: 10px;
+        width: 200px;
         margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
     }
+
     .close2 img {
         display: block;
         /* margin: 10px; */
         cursor: pointer;
         position: absolute;
-        right:8px;
+        right: 8px;
         top: 10px;
     }
-    .footer-content
-    {
-        /* position: 0; */
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* position: absolute; */
 
         color: #7d7c7c;
+        /* background-color: azure; */
 
     }
 
@@ -451,7 +478,7 @@ body {
         align-items: center;
         cursor: pointer;
     }
-    
+
 
 }
 
